@@ -74,4 +74,4 @@ def get_question_index(df: pd.DataFrame):
     elif df.times_answered.sum() % 20 == 0:
         return df.sample().index
     else:
-        return df.sort_values('statistics').head().sample().index
+        return df.sort_values('statistics').head(15).sample().index
